@@ -7,8 +7,34 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+    et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
+    consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+    sed diam voluptua, ugo consetetur Lorem Ipsum.
   </p>
+  <ion-list>
+    <ion-item-sliding *ngFor="let lugar of lugares">
+      <ion-item (click)="irAVistaDetalleExistente(lugar)">
+        <ion-avatar item-start>
+          <img src="https://picsum.photos/200/300/?random">
+        </ion-avatar>
+        <h2>{{lugar.nombre}}</h2>
+        <h3>{{lugar.direccion}}</h3>
+        <p>{{lugar.categoria}}</p>
+      </ion-item>
+      <ion-item-options side="right">
+          <button ion-button color="danger" (click)="deleteLugar(lugar)" >
+            <ion-icon name="trash"></ion-icon>
+            Borrar
+          </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab color="danger" (click)="irAVistaDetalle()" ><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
 </ion-content>
+
+
