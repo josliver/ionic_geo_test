@@ -20,12 +20,12 @@ import { LugaresService } from '../services/lugares.services';
 import { AuthService } from '../services/auth.services';
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyBNbFvk7VEphcXYZS7t3TRTUMmtrYYZEX8",
-  authDomain: "ionicbasis-test.firebaseapp.com",
-  databaseURL: "https://ionicbasis-test.firebaseio.com",
-  projectId: "ionicbasis-test",
-  storageBucket: "ionicbasis-test.appspot.com",
-  messagingSenderId: "124969931819"  
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: ""  
 };
 
 @NgModule({
